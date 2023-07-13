@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.poroTilte {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 700;
+}
+.clock {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/ali-zahdhan-WpU9j-_FeYk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-transition: background-image 5s;
+  position: fixed;
+  bottom: 150px;
+}
+.action {
+  background: url("./assets/robert-lukeman-_RBcxo9AU-U-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* -webkit-transition: background-image 5s; */
+}
+.timer {
+  display: flex;
+  width: 60%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.row1 {
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action {
+  margin-top: 50px;
+}
+.actionbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+}
+.actionbtn:hover .actionIcon {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+.curenttime {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.setTimer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.set {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.set input {
+  margin-left: 10px;
+  height: 25px;
+  font-size: 20px;
+}
+.setWorktime {
+  margin-left: 15px !important;
+}
+.setTimeLabel {
+  color: #ffff;
+}

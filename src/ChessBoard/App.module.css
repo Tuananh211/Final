@@ -1,0 +1,38 @@
+.row {
+  margin-top: 10px;
+  display: flex;
+}
+.wrapper {
+  margin-left: 70px;
+  padding-top: 30px;
+}
+.container {
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 16px;
+}
+.color {
+  width: 70%;
+  margin-left: 60px;
+}
+.input {
+  width: 70%;
+  text-align: center;
+}
+/* .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.sizeChess {
+  margin-left: 24px;
+}
+.evencolor {
+  margin-left: 55px;
+}
+/* .sizeChess {
+  margin-left: -2px;
+} */

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  box-sizing: border-box;
+}
+.container1 {
+  /* display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  margin-left: 100px;
+  padding-top: 24px;
+}
+.calculator {
+  width: 320px;
+  background-color: #313131;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.calTitle {
+  font-family: "VT323", monospace;
+  font-size: 40px;
+}
+.inputbtn {
+  height: 50px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inputbtn:hover {
+  background-color: #50b582;
+}
+.buttonGroup {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(4, auto);
+}
+.input {
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputtxt {
+  width: 100%;
+  height: 60%;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  text-align: right;
+  font-size: 20px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+.result {
+  width: 100%;
+  height: 40%;
+  border: none;
+  outline: none;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.active {
+  background-color: #50b582;
+}

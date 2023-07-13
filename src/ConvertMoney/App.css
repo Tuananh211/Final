@@ -1,0 +1,77 @@
+/* *{
+    box-sizing: border-box;
+} */
+/* body{
+    background-image: url("./assets/micheile-henderson-hQSDJhTf2Po-unsplash.jpg");
+    background-repeat: no-repeat;
+ background-size: cover;
+} */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/kostiantyn-li-M9766XAhQ3U-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainContainer {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 50%;
+  /* grid-template-columns: 1fr 48px 1fr; */
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #ffff;
+}
+.icon {
+  font-size: 20px;
+  padding-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px auto;
+  border: 1px solid rgb(221, 221, 221);
+}
+.icon:hover {
+  background-color: orange;
+}
+h1.title {
+  text-align: center;
+  font-size: 34px;
+}
+.vnflag {
+  background-image: url("./assets/vnd.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+.usflag {
+  background-image: url("./assets/usd.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+.currentConvert {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+#inputMoney{
+  background-color: #ffff;
+  color:black
+}
