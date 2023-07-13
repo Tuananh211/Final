@@ -32,6 +32,8 @@ import HelloWorld from "./HelloWorld/App";
 import ConvertMoney from "./ConvertMoney/App";
 import Quotes from "./Quotes";
 import Popup from "./Popup/Popup";
+import LoginForm from "./LoginFrom/LoginForm";
+
 import "normalize.css";
 import "./App.css";
 import img1 from "./assets/img1.png";
@@ -87,6 +89,12 @@ const App = () => {
           label: <Link to="/Quotes">{t("Quotes")}</Link>,
           path: "/Quotes",
         },
+        {
+          key: "/Login",
+          icon: <RiChatQuoteLine />,
+          label: <Link to="/Login">{t("Quotes")}</Link>,
+          path: "/Login",
+        },
       ],
     },
   ];
@@ -100,7 +108,7 @@ const App = () => {
       algorithm: theme.defaultAlgorithm,
       token: {
         colorPrimary: "orange",
-        colorBgLayout: "#91caff",
+        colorBgLayout: "#ffff",
         colorPrimaryBorder: "#cccc",
         colorBgTextHover: "#F4A460",
       },
@@ -109,7 +117,7 @@ const App = () => {
       algorithm: theme.darkAlgorithm,
       token: {
         colorPrimary: "#1E90FF",
-        colorBgLayout: "#062372",
+        colorBgLayout: "#FFE4C4",
         colorBgTextHover: "#87CEEB",
       },
     },
@@ -124,10 +132,16 @@ const App = () => {
   };
 
   const currentPath = window.location.pathname;
+  
+  const[token,setToken]= useState(null)
 
+  if((token==null || !token.length) && currentPath!='/Login' ){
+    window.location.href="/Login"
+  }
   return (
     <ConfigProvider theme={themeCustom[modeTheme]}>
-      <Router>
+        {token?(
+        <Router>
         <Layout style={{ minHeight: "100vh" }}>
           <Sider
             className="slider"
@@ -270,6 +284,9 @@ const App = () => {
                   <Route path="/Quotes">
                     <Quotes />
                   </Route>
+                  <Route path="/Login">
+                    <LoginForm/>
+                  </Route>
                 </Switch>
               </div>
             </Content>
@@ -286,7 +303,24 @@ const App = () => {
             </Footer>
           </Layout>
         </Layout>
+      </Router>):<Router>
+         <Route path='/Login'>
+          <LoginForm 
+                onSubmit={
+                async (username, password) => {
+                const response = await fetch('http://localhost:3000/authenticate', {
+                    method: 'POST', 
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }, 
+                    body: JSON.stringify({username, password})
+                });
+                const {token} = await response.json();
+                setToken(token);
+              }}/>
+         </Route>
       </Router>
+    }  
     </ConfigProvider>
   );
 };
