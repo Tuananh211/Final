@@ -3,7 +3,7 @@ import "./quotes.css";
 import { useState } from "react";
 import { Input, Button, Col, Row, Card } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-const Quotes = () => {
+const Quotes = ({ token }) => {
   const [numQuotes, setNum] = useState();
   const [quotes, setQuotes] = useState([]);
   async function restApi() {
@@ -11,6 +11,7 @@ const Quotes = () => {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
+        token: token,
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: JSON.stringify({ num: numQuotes }), // body data type must match "Content-Type" header
@@ -22,7 +23,7 @@ const Quotes = () => {
   }
   return (
     <div className="wrapper1">
-      <h1>Quotes of The Day</h1>
+      <h1 style={{fontSize:"42px"}}>Quotes of The Day</h1>
       <div className="actionBtn">
         <Input
           type="Number"
@@ -37,7 +38,7 @@ const Quotes = () => {
         </Button>
       </div>
       <div className="quotes">
-        <Row gutter={[16, 20]}>
+        <Row gutter={[16,20]}>
           {quotes.map((quote, index) => {
             return (
               <Col span={8} key={index} title="">

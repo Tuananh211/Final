@@ -27,11 +27,19 @@ function Chess() {
   return (
     <>
       <div className={cx("wrapper")}>
+        <h1
+          style={{
+            // textAlign:'center'
+            fontSize: "46px",
+            marginBottom: "20px",
+          }}
+        >
+          Chess Board
+        </h1>
         <div className={cx("container")}>
-             <h1 style={{textAlign:'center'}}>Chess Board</h1>
           {/* <div className={cx("center")}> */}
-         
-            <div className={cx("row")}>
+
+          <div className={cx("row")}>
             <label>Size of chess board</label>
             <input
               type="text"

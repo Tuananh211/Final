@@ -1,9 +1,10 @@
 .row {
   margin-top: 10px;
   display: flex;
+  align-items: center;
 }
 .wrapper {
-  margin-left: 70px;
+  margin-left: 100px;
   padding-top: 30px;
 }
 .container {
@@ -20,6 +21,7 @@
 .input {
   width: 70%;
   text-align: center;
+  padding: 5px;
 }
 /* .center {
   display: flex;

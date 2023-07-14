@@ -42,7 +42,7 @@ function Pomodoro() {
     };
   }, []);
 
-  // Hàm chuyển đổi thời gian
+  // //Hàm chuyển đổi thời gian
   // function formatTime(totalSeconds) {
   //   const hours = Math.floor(totalSeconds / 3600); // Tính số giờ (3600 giây trong một giờ)
   //   const minutes = Math.floor((totalSeconds % 3600) / 60); // Tính số phút (60 giây trong một phút)
@@ -63,6 +63,9 @@ function Pomodoro() {
     setActive(true);
     setMode("Working");
   };
+
+
+  
 
   const handlePause = () => {
     setActive(false);

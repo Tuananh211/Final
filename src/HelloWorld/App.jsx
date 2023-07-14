@@ -12,9 +12,9 @@ function HelloWorld() {
     <>
       <Space
         direction="vertical"
-        style={{ alignItems: "center", marginLeft: "80px" }}
+        style={{ marginLeft: "80px", marginTop:'30px' }}
       >
-        <h1> HELLO WORLD</h1>
+        <h1 style={{fontSize:"46px"}}> Hello World</h1>
         <Space
           direction="vertical"
           style={{

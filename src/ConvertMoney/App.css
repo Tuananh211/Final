@@ -11,11 +11,12 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("./assets/kostiantyn-li-M9766XAhQ3U-unsplash.jpg");
+  /* align-items: center;
+  justify-content: center; */
+  background-image: url("./assets/towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 100px;
 }
 .mainContainer {
   /* margin: auto; */
@@ -42,13 +43,14 @@
   text-align: center;
   margin: 10px auto;
   border: 1px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .icon:hover {
   background-color: orange;
 }
 h1.title {
-  text-align: center;
-  font-size: 34px;
+  font-size: 46px;
+  padding: 30px 0;
 }
 .vnflag {
   background-image: url("./assets/vnd.svg");
